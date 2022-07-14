@@ -1,7 +1,11 @@
-package com.provenir.robobob.solver.parser.tokens;
+package com.provenir.robobob.solver.lexer.tokens;
 
-public class Value extends Node {
+public class Value implements Token {
     private Float aFloat;
+
+    public Value(Float aFloat) {
+        this.aFloat = aFloat;
+    }
 
     public Float getaFloat() {
         return aFloat;

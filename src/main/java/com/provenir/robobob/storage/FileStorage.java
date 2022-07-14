@@ -1,11 +1,7 @@
 package com.provenir.robobob.storage;
 
-import com.provenir.robobob.storage.types.QuestionAnswer;
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public final class FileStorage extends BaseStorage{
 
@@ -27,7 +23,7 @@ public final class FileStorage extends BaseStorage{
      * {@inheritDoc}
      */
     @Override
-    public List<QuestionAnswer> getQuestionList() {
+    public Map<String, String> getQuestionList() {
         ClassLoader classLoader = getClass().getClassLoader();
         InputStream inputStream = classLoader.getResourceAsStream(filePath);
         List<String> stringList = readFromInput(inputStream);
@@ -59,11 +55,11 @@ public final class FileStorage extends BaseStorage{
      * @param stringList The string list to parse.
      * @return Returns the list of Questions and Answers.
      */
-    private List<QuestionAnswer> parseStringList(List<String> stringList) {
-        List<QuestionAnswer> questionList = new ArrayList<>();
+    private Map<String, String> parseStringList(List<String> stringList) {
+        Map<String, String> questionList = new HashMap<>();
         for (String line : stringList) {
             String[] parts = line.split("\\|");
-            questionList.add(new QuestionAnswer(parts[0], parts[1]));
+            questionList.put(parts[0], parts[1]);
         }
         return questionList;
     }

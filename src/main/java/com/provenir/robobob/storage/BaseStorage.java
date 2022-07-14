@@ -1,12 +1,12 @@
 package com.provenir.robobob.storage;
 
-import com.provenir.robobob.storage.types.QuestionAnswer;
+import java.util.Collections;
 
-import java.util.List;
+import java.util.Map;
 
-public abstract class BaseStorage implements StorageInterface{
+public abstract class BaseStorage implements StorageInterface {
     @Override
-    public List<QuestionAnswer> getQuestionList() {
-        return null;
+    public Map<String, String> getQuestionList() {
+        return Collections.emptyMap();
     }
 }

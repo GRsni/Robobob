@@ -3,7 +3,6 @@ package com.provenir.robobob;
 import com.provenir.robobob.logger.AppLogger;
 import com.provenir.robobob.solver.BaseSolver;
 import com.provenir.robobob.solver.MathSolver;
-import com.provenir.robobob.solver.SolverInterface;
 import com.provenir.robobob.solver.QuestionSolver;
 import com.provenir.robobob.storage.*;
 
@@ -27,23 +26,20 @@ public class Robobob {
     public static void main(String[] args) {
         AppLogger.setup();
         LOGGER.setLevel(Level.INFO);
-
         LOGGER.info("[General information]: Started application.");
 
-        System.out.println("Welcome to Robobob");
+        System.out.println("Welcome to Robobob\n");
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
-            System.out.println("Question >");
+            System.out.print("Question > ");
             try {
                 String input = bufferedReader.readLine();
                 if (input.equals("exit")) {
                     break;
                 }
 
-                String response = selectSolver(input).evaluateExpression(input);
-
-                System.out.println(response);
+                System.out.println("Answer: " + selectSolver(input).evaluateExpression(input) + "\n");
 
             } catch (IOException e) {
                 LOGGER.severe("[Error]: " + e.getMessage());
@@ -62,4 +58,6 @@ public class Robobob {
             return new QuestionSolver(Robobob.storage);
         }
     }
+
+
 }

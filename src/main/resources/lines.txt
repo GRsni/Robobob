@@ -1,4 +1,4 @@
-What is your name|Robobob
-What is your age|1-year-old
-What is your favorite color|Deep blue
-Hello|How are you?
+what is your name|Robobob
+what is your age|1-year-old
+hat is your favorite color|Deep blue
+hello|How are you?
