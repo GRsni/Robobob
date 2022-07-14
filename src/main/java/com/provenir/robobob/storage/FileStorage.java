@@ -3,18 +3,36 @@ package com.provenir.robobob.storage;
 import java.io.*;
 import java.util.*;
 
-public final class FileStorage extends BaseStorage{
+/**
+ * The type File storage.
+ */
+public class FileStorage extends BaseStorage{
 
     private String filePath;
 
+    /**
+     * Instantiates a new File storage.
+     *
+     * @param filePath the file path
+     */
     public FileStorage(String filePath){
         this.filePath = filePath;
     }
 
+    /**
+     * Gets file path.
+     *
+     * @return the file path
+     */
     public String getFilePath() {
         return filePath;
     }
 
+    /**
+     * Sets file path.
+     *
+     * @param filePath the file path
+     */
     public void setFilePath(String filePath) {
         this.filePath = filePath;
     }

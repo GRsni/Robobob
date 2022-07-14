@@ -5,10 +5,18 @@ import com.provenir.robobob.solver.lexer.exception.LexerException;
 import com.provenir.robobob.solver.lexer.tokens.*;
 import com.provenir.robobob.solver.parser.exception.ParserException;
 
+/**
+ * The type Parser.
+ */
 public class Parser implements ParserInterface {
 
     private final Lexer lexer;
 
+    /**
+     * Instantiates a new Parser.
+     *
+     * @param lexer the lexer
+     */
     public Parser(Lexer lexer) {
         this.lexer = lexer;
     }

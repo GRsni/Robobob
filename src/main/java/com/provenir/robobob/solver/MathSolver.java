@@ -10,6 +10,9 @@ import com.provenir.robobob.solver.parser.exception.ParserException;
 import java.util.logging.Logger;
 
 
+/**
+ * The type Math solver.
+ */
 public class MathSolver extends BaseSolver {
     /**
      * The constant LOGGER.
@@ -17,6 +20,9 @@ public class MathSolver extends BaseSolver {
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
 
+    /**
+     * Instantiates a new Math solver.
+     */
     public MathSolver() {
         super();
     }

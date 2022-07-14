@@ -2,6 +2,9 @@ package com.provenir.robobob.solver.lexer;
 
 import com.provenir.robobob.solver.lexer.exception.LexerException;
 
+/**
+ * The type Lexer.
+ */
 public class Lexer implements LexerInterface {
 
     private static final String ALL_TOKENS = "0123456789.()+-*/";
@@ -11,6 +14,12 @@ public class Lexer implements LexerInterface {
     private int pointer;
     private String nextToken;
 
+    /**
+     * Instantiates a new Lexer.
+     *
+     * @param input the input
+     * @throws LexerException the lexer exception
+     */
     public Lexer(String input) throws LexerException {
         this.input = input;
         nextToken = null;
@@ -18,6 +27,11 @@ public class Lexer implements LexerInterface {
         scanToken();
     }
 
+    /**
+     * Gets next token.
+     *
+     * @return the next token
+     */
     public String getNextToken() {
         return nextToken;
     }

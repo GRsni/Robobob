@@ -12,6 +12,9 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * The type Robobob.
+ */
 public class Robobob {
 
     /**
@@ -23,6 +26,11 @@ public class Robobob {
 
     private static final StorageInterface storage = new FileStorage(FILEPATH);
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         AppLogger.setup();
         LOGGER.setLevel(Level.INFO);
@@ -49,6 +57,12 @@ public class Robobob {
         LOGGER.info("[General information]: Finished application.");
     }
 
+    /**
+     * Select solver base solver.
+     *
+     * @param expression the expression
+     * @return the base solver
+     */
     static BaseSolver selectSolver(String expression) {
         //Math expression can start with a digit, the minus sign or an open parenthesis.
         char firstCharacter = expression.charAt(0);
