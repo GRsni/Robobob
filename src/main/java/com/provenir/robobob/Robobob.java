@@ -22,9 +22,9 @@ public class Robobob {
      */
     private static final Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    private static final String FILEPATH = "lines.txt";
+    private static final String STORAGE_FILENAME = "lines.txt";
 
-    private static final StorageInterface storage = new FileStorage(FILEPATH);
+    private static final StorageInterface storage = new FileStorage(STORAGE_FILENAME);
 
     /**
      * The entry point of application.
@@ -36,7 +36,7 @@ public class Robobob {
         LOGGER.setLevel(Level.INFO);
         LOGGER.info("[General information]: Started application.");
 
-        System.out.println("Welcome to Robobob\n");
+        System.out.println("Welcome to Robobob. Type a simple question or an arithmetic expression:\n(Type \"exit\" to end the program)\n");
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {

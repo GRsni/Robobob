@@ -8,7 +8,7 @@ import java.util.Map;
 public interface StorageInterface {
 
     /**
-     * Returns the list of Questions and answers read from storage.
+     * Returns the map of questions and answers read from storage.
      *
      * @return The list of questions with their corresponding answers.
      */
